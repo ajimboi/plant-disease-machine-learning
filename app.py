@@ -9,7 +9,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Load the pre-trained model
-model = load_model('HARUMANISDISEASE_model.h5')
+model = load_model('HARUMANISDISEASENEW_model.h5')
 
 # Function to preprocess input image
 def preprocess_image(image):
@@ -69,4 +69,4 @@ def predict():
 if __name__ == '__main__':
     if not os.path.exists('uploads'):
         os.makedirs('uploads')
-    app.run(host='localhost', port=5000)
+    app.run(host='0.0.0.0', port=5000)
